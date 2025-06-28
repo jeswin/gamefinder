@@ -1,0 +1,31 @@
+{
+  "name": "gamefinder-app",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-resolvers": "^4.5.1",
+    "concurrently": "^9.2.0",
+    "typescript": "^5.8.3"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "./build.sh",
+    "clean": "./clean.sh",
+    "migrate:latest": "knex migrate:latest --knexfile knexfile.mjs",
+    "migrate:make": "knex migrate:make --knexfile knexfile.mjs",
+    "seed:make": "knex seed:make --knexfile knexfile.mjs",
+    "seed:run": "knex seed:run --knexfile knexfile.mjs",
+    "start": "concurrently --kill-others-on-fail \"npm run start:server\" \"npm run start:webapp\"",
+    "start:server": "cd node/packages/server && npm run dev:start",
+    "start:webapp": "cd node/packages/ui && npm run dev"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.6",
+    "@types/pg": "^8.15.4",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "pg-promise": "^11.14.0"
+  }
+}
