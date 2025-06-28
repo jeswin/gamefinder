@@ -4,6 +4,7 @@ import http from "http";
 import cors from "cors";
 import { config } from "./config.js";
 import { setupAuthRoutes } from "./auth/routes.js";
+import { setupGraphQLServer } from "./graphql/setup.js";
 
 async function startServer() {
   const app = express();
@@ -25,9 +26,6 @@ async function startServer() {
 
   // Setup authentication routes
   setupAuthRoutes(app);
-
-  // Create resolver structure if needed (development convenience)
-  createResolverStructure();
 
   // Setup GraphQL server
   await setupGraphQLServer(app, httpServer);

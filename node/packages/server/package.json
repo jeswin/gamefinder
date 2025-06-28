@@ -6,9 +6,9 @@
     "type": "module",
     "scripts": {
         "generate": "graphql-codegen --config codegen.yml",
-        "type-check": "tsc --noEmit",
-        "build": "npm run generate && tsc && mkdir -p dist/graphql && cp src/graphql/schema.graphql dist/graphql/",
-        "dev": "tsc --watch",
+        "type-check": "npx tsc --noEmit",
+        "build": "npm run generate && npx tsc && mkdir -p dist/graphql && cp src/graphql/schema.graphql dist/graphql/",
+        "dev": "npx tsc --watch",
         "start": "node dist/index.js",
         "dev:start": "concurrently \"npm run dev\" \"nodemon dist/index.js\"",
         "copyschema": "mkdir -p dist/graphql && cp src/graphql/schema.graphql dist/graphql/"

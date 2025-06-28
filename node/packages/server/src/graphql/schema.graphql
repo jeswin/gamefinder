@@ -1,7 +1,11 @@
+type Query {
+  me: User
+}
+
 type User {
   id: ID!
-  email: String!
   name: String
+  email: String!
   picture: String
   bio: String
 }

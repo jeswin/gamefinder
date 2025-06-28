@@ -6,10 +6,10 @@
   "description": "GameFinder UI",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npx tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx",
-    "check": "tsc --noEmit",
+    "check": "npx tsc --noEmit",
     "start": "node server.cjs"
   },
   "dependencies": {
