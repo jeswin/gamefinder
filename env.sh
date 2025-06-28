@@ -1,0 +1,5 @@
+export GAMEFINDER_DB_HOST=localhost
+export GAMEFINDER_DB_PORT=5432
+export GAMEFINDER_DB_USER=postgres
+export GAMEFINDER_DB_PASS=postgres
+export GAMEFINDER_DB_NAME=gamefinderdb
